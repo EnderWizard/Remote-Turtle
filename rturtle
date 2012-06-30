@@ -1,0 +1,33 @@
+function XRPturtle()
+while true do
+local sender, message = rednet.receive()
+if(turtle.detect() == true) then
+rednet.broadcast("F")
+end
+if(turtle.detectUp() == true) then
+rednet.broadcast("U")
+end
+if(turtle.detectDown() == true) then
+rednet.broadcast("D")
+end
+if(message == "XRP FW") then
+turtle.forward()
+elseif(message == "XRP BW") then
+turtle.back()
+elseif(message == "XRP TL") then
+turtle.turnLeft()
+elseif(message == "XRP TR") then
+turtle.turnRight()
+elseif(message == "XRP UP") then
+turtle.up()
+elseif(message == "XRP DN") then
+turtle.down()
+elseif(message == "XRP PB") then
+turtle.place()
+elseif(message == "XRP BB") then
+turtle.dig()
+ens
+end
+end
+rednet.open("right")
+XRPturtle()

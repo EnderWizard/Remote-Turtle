@@ -1,0 +1,29 @@
+function XRPbase()
+while true do
+local sEvent, param = os.pullEvent("key")
+if(sEvent == "key") then
+if(param == 200) then
+rednet.broadcast("XRP FW")
+elseif(param == 208) then
+rednet.broadcast("XRP BW")
+elseif(param == 203) then
+rednet.broadcast("XRP TL")
+elseif(param == 205) then
+rednet.broadcast("XRP TR")
+elseif(param == 199) then
+rednet.broadcast("XRP UP")
+elseif(param == 207) then
+rednet.broadcast("XRP DN")
+elseif(param == 78) then
+rednet.broadcast("XRP PB")
+elseif(param == 74) then
+rednet.broadcast("XRP BB")
+end
+end
+end
+end
+print("Dove si trova il tuo modem?")
+local modem = read()
+rednet.open(modem)
+term.clear()
+XRPbase()
